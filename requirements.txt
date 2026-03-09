@@ -1,0 +1,43 @@
+# ===========================================================
+# AI Outreach Agent — Python Dependencies
+# Install with: pip install -r requirements.txt
+# ===========================================================
+
+# Database
+psycopg2-binary==2.9.9
+
+# HTTP & Scraping
+requests==2.31.0
+beautifulsoup4==4.12.3
+lxml==5.1.0
+scrapy==2.11.1
+playwright==1.43.0       # After install: playwright install chromium
+
+# LLM (local Ollama)
+ollama==0.2.1
+
+# Embeddings & Vector Store
+sentence-transformers==2.7.0
+chromadb==0.5.0
+torch==2.3.0              # CPU-only OK; GPU preferred
+
+# Pipeline Orchestration
+prefect==2.19.3
+
+# Configuration & Environment
+python-dotenv==1.0.1
+pyyaml==6.0.1
+
+# Email (stdlib – no install needed, listed for documentation)
+# smtplib  — stdlib
+# imaplib  — stdlib
+# email    — stdlib
+
+# Utilities
+tqdm==4.66.2
+loguru==0.7.2              # Drop-in rich logger
+tenacity==8.3.0            # Retry decorator
+
+# Dev / Testing
+pytest==8.1.1
+pytest-asyncio==0.23.6

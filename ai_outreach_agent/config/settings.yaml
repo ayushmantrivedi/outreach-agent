@@ -1,0 +1,64 @@
+# ============================================================
+# AI Outreach Agent — Central Configuration
+# ============================================================
+# Switch projects by editing this file only. All agents read
+# from here so outreach adapts automatically.
+
+# ----------------------------------------------------------
+# Project Details
+# ----------------------------------------------------------
+project_name: "My AI Project"
+github_repo: "https://github.com/yourusername/your-repo"
+project_description: >
+  An open-source AI framework that accelerates model training
+  using custom CUDA kernels and dynamic sparsity techniques.
+  Achieves 3x speedup over PyTorch baselines on standard
+  benchmarks. Useful for research labs and AI startups that
+  train large language models or vision transformers.
+target_company_domain: "AI infrastructure, LLM tooling, MLOps"
+developer_name: "Your Name"
+developer_title: "AI Engineer / Researcher"
+developer_linkedin: "https://linkedin.com/in/yourprofile"
+
+# ----------------------------------------------------------
+# Outreach Settings
+# ----------------------------------------------------------
+email_tone: "technical"           # Options: technical | friendly | formal
+email_template: "engineering_role" # Options: research | engineering_role | showcase
+daily_email_limit: 20
+relevance_threshold: 7            # 1-10; only companies above this get emails
+
+# ----------------------------------------------------------
+# LLM Settings (Ollama)
+# ----------------------------------------------------------
+llm_model: "llama3"               # Options: llama3 | mistral
+ollama_timeout: 120               # seconds
+
+# ----------------------------------------------------------
+# Embedding Settings
+# ----------------------------------------------------------
+embedding_model: "all-MiniLM-L6-v2"
+chroma_collection: "project_knowledge"
+chunk_size: 500                   # characters per chunk
+chunk_overlap: 50
+
+# ----------------------------------------------------------
+# Scheduling
+# ----------------------------------------------------------
+discovery_interval_hours: 24
+monitor_interval_minutes: 5
+
+# ----------------------------------------------------------
+# Scraping Targets
+# ----------------------------------------------------------
+scraping_sources:
+  - yc_companies
+  - github_orgs
+  - ai_directories
+
+github_orgs_to_scrape:
+  - "huggingface"
+  - "openai"
+  - "mistralai"
+  - "deepmind"
+  - "anthropics"
