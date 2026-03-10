@@ -19,7 +19,7 @@ import os
 from typing import Dict
 
 import yaml
-from dotenv import load_dotenv
+from ai_outreach_agent.utils import load_env
 from loguru import logger
 from prefect import flow, task
 

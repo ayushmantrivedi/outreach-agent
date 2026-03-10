@@ -14,10 +14,10 @@ from typing import Any, Dict, List, Optional
 import psycopg2
 from psycopg2 import pool as pgpool
 from psycopg2.extras import RealDictCursor
-from dotenv import load_dotenv
+from ai_outreach_agent.utils import load_env
 from loguru import logger
 
-load_dotenv()
+load_env()
 
 # ---------------------------------------------------------------------------
 # Connection pool (created once at module import time)

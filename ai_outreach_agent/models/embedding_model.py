@@ -13,11 +13,11 @@ from typing import List, Optional
 import requests
 from chromadb import PersistentClient
 from chromadb.config import Settings
-from dotenv import load_dotenv
+from ai_outreach_agent.utils import load_env
 from loguru import logger
 from sentence_transformers import SentenceTransformer
 
-load_dotenv()
+load_env()
 
 _CHROMA_PERSIST_DIR = os.getenv("CHROMA_PERSIST_DIR", "./chroma_store")
 _GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")

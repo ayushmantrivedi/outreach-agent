@@ -10,11 +10,11 @@ import os
 from typing import Any, Dict, Optional
 
 import requests
-from dotenv import load_dotenv
+from ai_outreach_agent.utils import load_env
 from loguru import logger
 from tenacity import retry, stop_after_attempt, wait_exponential
 
-load_dotenv()
+load_env()
 
 _OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 

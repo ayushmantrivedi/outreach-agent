@@ -15,13 +15,13 @@ import os
 from typing import Dict, Optional, Tuple
 
 import yaml
-from dotenv import load_dotenv
+from ai_outreach_agent.utils import load_env
 from loguru import logger
 
 from ai_outreach_agent.models.llm_interface import LLMInterface
 from ai_outreach_agent.models.embedding_model import EmbeddingModel
 
-load_dotenv()
+load_env()
 
 _CONFIG_PATH = os.path.join(os.path.dirname(__file__), "..", "config", "settings.yaml")
 

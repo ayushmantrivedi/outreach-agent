@@ -9,10 +9,10 @@ import os
 from typing import Optional
 
 import requests
-from dotenv import load_dotenv
+from ai_outreach_agent.utils import load_env
 from loguru import logger
 
-load_dotenv()
+load_env()
 
 _BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 _CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")

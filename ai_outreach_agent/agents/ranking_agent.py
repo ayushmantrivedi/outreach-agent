@@ -10,7 +10,7 @@ outreach queue (is_qualified = TRUE).
 import os
 
 import yaml
-from dotenv import load_dotenv
+from ai_outreach_agent.utils import load_env
 from loguru import logger
 
 from ai_outreach_agent.database.db import (

@@ -19,7 +19,7 @@ from email.mime.text import MIMEText
 from typing import Dict, List
 
 import yaml
-from dotenv import load_dotenv
+from ai_outreach_agent.utils import load_env
 from loguru import logger
 
 from ai_outreach_agent.database.db import (

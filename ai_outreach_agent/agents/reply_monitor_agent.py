@@ -16,7 +16,7 @@ from email.header import decode_header
 from typing import Optional
 
 import yaml
-from dotenv import load_dotenv
+from ai_outreach_agent.utils import load_env
 from loguru import logger
 
 from ai_outreach_agent.database.db import (

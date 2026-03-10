@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Environment — NEVER commit real credentials
+.env
+*.env
+
+# Vector store (can be re-generated with: python main.py --mode ingest)
+chroma_store/
+
+# Logs
+logs/
+*.log
+
+# pytest
+.pytest_cache/
+.coverage
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
