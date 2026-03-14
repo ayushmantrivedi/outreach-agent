@@ -37,19 +37,27 @@ def _load_config() -> dict:
 
 _TEMPLATE_INSTRUCTIONS = {
     "research": (
-        "Write a professional, concise email from a researcher to a company, "
-        "proposing a potential research collaboration or knowledge exchange on the project described. "
-        "Keep it under 200 words. Do not use generic AI-generated phrases. Be specific."
+        "Write a professional, concise email from an undergraduate/early-career researcher "
+        "to a research lab or company, proposing a potential research internship or collaboration "
+        "on topics related to the developer's project. "
+        "Mention specific technical overlap between the project and the company's work. "
+        "Keep it under 180 words. Be specific and genuine — no generic phrases."
     ),
     "engineering_role": (
-        "Write a concise, technical cold outreach email from a software engineer "
-        "expressing genuine interest in contributing to or joining the company. "
-        "Connect the developer's project to the company's work. Under 200 words."
+        "Write a concise, technical cold email from an AI/ML student or early-career developer "
+        "seeking an internship or entry-level opportunity at the company. "
+        "Lead with the EvoNet project as evidence of hands-on ML skills (evolutionary algorithms, "
+        "PyTorch, GPU acceleration, genetic operators like SBX crossover and CMA-ES). "
+        "Connect the project's approach to the company's work specifically. "
+        "Include a GitHub link. End with a clear, low-pressure ask (e.g. 'Would love to explore "
+        "if there are any internship or research opportunities'). Under 200 words. "
+        "Tone: technical but human. No buzzwords."
     ),
     "showcase": (
-        "Write a brief, enthusiastic email showcasing an open-source project "
-        "to a company that might find it useful. Highlight concrete technical benefits. "
-        "Include a call-to-action (e.g. 'I'd love to hear your thoughts'). Under 150 words."
+        "Write a brief, enthusiastic email showcasing the EvoNet open-source project "
+        "to a company or research lab that works on related areas (evolutionary AI, NAS, RL, etc). "
+        "Mention what makes it novel (no backpropagation, population-based GPU training, CMA-ES). "
+        "End with an invitation to give feedback or collaborate. Under 150 words."
     ),
 }
 

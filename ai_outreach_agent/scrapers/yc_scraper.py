@@ -64,18 +64,24 @@ def _fetch_yc_batch(page: int, hits_per_page: int = 50) -> List[Dict]:
             }
         ]
     }
-    resp = requests.post(
-        _YC_ALGOLIA_URL,
-        json=payload,
-        headers={
-            **_HEADERS,
-            "X-Algolia-Application-Id": _YC_ALGOLIA_APP_ID,
-            "X-Algolia-API-Key": _YC_ALGOLIA_API_KEY,
-        },
-        timeout=20,
-    )
-    resp.raise_for_status()
-    return resp.json()["results"][0].get("hits", [])
+    try:
+        resp = requests.post(
+            _YC_ALGOLIA_URL,
+            json=payload,
+            headers={
+                **_HEADERS,
+                "X-Algolia-Application-Id": _YC_ALGOLIA_APP_ID,
+                "X-Algolia-API-Key": _YC_ALGOLIA_API_KEY,
+            },
+            timeout=20,
+        )
+        resp.raise_for_status()
+        return resp.json()["results"][0].get("hits", [])
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 403:
+            logger.warning("YC Algolia API returned 403 Forbidden. Skipping YC scraper.")
+            return []
+        raise
 
 
 def _scrape_contact_email(website: str) -> Optional[str]:

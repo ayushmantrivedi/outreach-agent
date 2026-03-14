@@ -33,7 +33,7 @@ from ai_outreach_agent.database.db import get_qualified_companies, apply_schema
 from ai_outreach_agent.models.embedding_model import EmbeddingModel
 from ai_outreach_agent.notifications.telegram_notifier import TelegramNotifier
 
-load_dotenv()
+load_env()
 
 _CONFIG_PATH = os.path.join(os.path.dirname(__file__), "..", "config", "settings.yaml")
 

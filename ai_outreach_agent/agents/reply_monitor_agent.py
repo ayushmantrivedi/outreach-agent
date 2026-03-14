@@ -28,7 +28,7 @@ from ai_outreach_agent.database.db import (
 from ai_outreach_agent.models.llm_interface import LLMInterface
 from ai_outreach_agent.notifications.telegram_notifier import TelegramNotifier
 
-load_dotenv()
+load_env()
 
 _CONFIG_PATH = os.path.join(os.path.dirname(__file__), "..", "config", "settings.yaml")
 _IMAP_HOST = os.getenv("IMAP_HOST", "imap.gmail.com")

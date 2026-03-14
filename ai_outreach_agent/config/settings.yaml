@@ -1,45 +1,51 @@
 # ============================================================
 # AI Outreach Agent — Central Configuration
+# Configured for: EvoNet (Evolutionary Neural Network)
+# Target: Internship outreach to AI/ML startups & research labs
 # ============================================================
-# Switch projects by editing this file only. All agents read
-# from here so outreach adapts automatically.
 
 # ----------------------------------------------------------
 # Project Details
 # ----------------------------------------------------------
-project_name: "My AI Project"
-github_repo: "https://github.com/yourusername/your-repo"
+project_name: "EvoNet: Evolutionary Neural Network"
+github_repo: "https://github.com/ayushmantrivedi/evolutionary-neural-network"
 project_description: >
-  An open-source AI framework that accelerates model training
-  using custom CUDA kernels and dynamic sparsity techniques.
-  Achieves 3x speedup over PyTorch baselines on standard
-  benchmarks. Useful for research labs and AI startups that
-  train large language models or vision transformers.
-target_company_domain: "AI infrastructure, LLM tooling, MLOps"
-developer_name: "Your Name"
-developer_title: "AI Engineer / Researcher"
-developer_linkedin: "https://linkedin.com/in/yourprofile"
+  EvoNet is an open-source neural network framework that replaces
+  traditional backpropagation with evolutionary algorithms for training.
+  Key innovations include: GPU-accelerated population-based training
+  (PyTorch/CUDA), Simulated Binary Crossover (SBX) for genetic
+  recombination, CMA-ES adaptive mutation that learns the mutation
+  landscape, tournament selection, and ResNet-style skip connections.
+  The framework maintains a population of 50 neuron variants per neuron,
+  evaluated in parallel on GPU, combining global evolutionary search
+  with local gradient-based refinement. Particularly suited for
+  non-differentiable objective functions, sparse rewards, and
+  hyperparameter optimisation. Built in Python with PyTorch.
+target_company_domain: "AI research, evolutionary computation, neural architecture search, reinforcement learning, ML infrastructure, deep learning frameworks"
+developer_name: "Ayushman Trivedi"
+developer_title: "AI/ML Developer & Researcher"
+developer_linkedin: "https://linkedin.com/in/ayushmantrivedi"
 
 # ----------------------------------------------------------
 # Outreach Settings
 # ----------------------------------------------------------
-email_tone: "technical"           # Options: technical | friendly | formal
-email_template: "engineering_role" # Options: research | engineering_role | showcase
+email_tone: "technical"
+email_template: "engineering_role"   # Internship / role outreach
 daily_email_limit: 20
-relevance_threshold: 7            # 1-10; only companies above this get emails
+relevance_threshold: 6               # Slightly lower to catch more relevant labs
 
 # ----------------------------------------------------------
 # LLM Settings (Ollama)
 # ----------------------------------------------------------
-llm_model: "llama3"               # Options: llama3 | mistral
-ollama_timeout: 120               # seconds
+llm_model: "phi3:mini"
+ollama_timeout: 120
 
 # ----------------------------------------------------------
 # Embedding Settings
 # ----------------------------------------------------------
 embedding_model: "all-MiniLM-L6-v2"
-chroma_collection: "project_knowledge"
-chunk_size: 500                   # characters per chunk
+chroma_collection: "evonet_knowledge"
+chunk_size: 500
 chunk_overlap: 50
 
 # ----------------------------------------------------------
@@ -56,9 +62,18 @@ scraping_sources:
   - github_orgs
   - ai_directories
 
+# AI/ML research orgs and startups to scrape for contacts
 github_orgs_to_scrape:
   - "huggingface"
+  - "google-deepmind"
   - "openai"
   - "mistralai"
-  - "deepmind"
-  - "anthropics"
+  - "EleutherAI"
+  - "microsoft"
+  - "facebookresearch"
+  - "pytorch"
+  - "jax-ml"
+  - "NVIDIA"
+  - "stability-ai"
+  - "cohere-ai"
+  - "allenai"
